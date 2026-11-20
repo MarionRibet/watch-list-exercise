@@ -2,12 +2,13 @@
   <div class="col-12 col-lg-6 text-dark">
     <%= simple_form_for list do |f| %>
       <%= f.input :name %>
-      <% if list.persisted? && list.movies.exists? %>
-        <%= f.input :poster_url,
+      <%= f.input :photo, as: :file %>
+      <%# <% if list.persisted? && list.movies.exists? %>
+        <%# <%= f.input :poster_url, %>
             collection: list.movies.pluck(:title, :poster_url),
             label_method: :first,
-            value_method: :last %>
-      <% end %>
+            value_method: :last
+      <%# <% end %>
       <%= f.submit "Save", class: "btn btn-primary w-100 btn-lg" %>
     <% end %>
   </div>
