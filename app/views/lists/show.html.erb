@@ -2,8 +2,8 @@
 <div class="container text-dark">
   <div class="d-flex justify-content-between">
     <h2>Bienvene dans la liste de <%= @list.name %></h2>
-    <%= link_to "Modifier la liste", edit_list_path(@list), class: "btn btn-info"  %>
-    <%= link_to "Ajouter un film", new_list_bookmark_path(@list), class: "btn btn-primary"  %>
+    <%= link_to "Modifier la liste", edit_list_path(@list), class: "btn btn-info mb-2"  %>
+    <%= link_to "Ajouter un film", new_list_bookmark_path(@list), class: "btn btn-primary mb-2"  %>
   </div>
   <div class="movies">
     <% @list.movies.each do |movie| %>
